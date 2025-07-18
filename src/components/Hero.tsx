@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Button } from './ui/button'
 import { ArrowRight, Play, Users, Globe, Award } from 'lucide-react'
 
@@ -58,22 +59,26 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-brand-primary hover:bg-brand-primary/90 text-white px-8 py-4 text-lg"
-              >
-                Explore Courses
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
+              <Link to="/courses">
+                <Button 
+                  size="lg" 
+                  className="bg-brand-primary hover:bg-brand-primary/90 text-white px-8 py-4 text-lg w-full sm:w-auto"
+                >
+                  Explore Courses
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
               
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-brand-secondary text-brand-secondary hover:bg-brand-secondary hover:text-white px-8 py-4 text-lg"
-              >
-                <Play className="w-5 h-5 mr-2" />
-                Watch Demo
-              </Button>
+              <Link to="/contact">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-brand-secondary text-brand-secondary hover:bg-brand-secondary hover:text-white px-8 py-4 text-lg w-full sm:w-auto"
+                >
+                  <Play className="w-5 h-5 mr-2" />
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
 
